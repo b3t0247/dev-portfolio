@@ -1,8 +1,16 @@
 ---
 import Navigation from './Navigation.astro';
+import ThemeToggle from "./ThemeToggle.astro";
+import {SITE} from "../site.config.ts";
 ---
 <header>
-  <nav>
+  <div>
+    <a href="/">
+        {SITE.name}
+    </a>
+
     <Navigation />
-  </nav>
+
+    <ThemeToggle />
+  </div>
 </header>
