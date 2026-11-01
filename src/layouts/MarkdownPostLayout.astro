@@ -3,6 +3,9 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
+  <h1 class="mb-4 text-4xl font-bold text-center">
+    {frontmatter.title}
+  </h1>
   <p>
     Published on: {
       new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
@@ -26,10 +29,6 @@ const { frontmatter } = Astro.props;
   <slot />
 </BaseLayout>
 <style>
-  a {
-    color: #00539F;
-  }
-
   .tags {
     display: flex;
     flex-wrap: wrap;

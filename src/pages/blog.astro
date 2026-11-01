@@ -7,7 +7,9 @@ const pageTitle = "Learning Blog";
 const allPosts = await getCollection("blog");
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Welcome to my Astro site!</h2>
+  <h1 class="mb-6 text-3xl font-bold text-center">
+      Welcome to my Blog!
+  </h1>
 	<p>This is where I will post about my journey learning Astro.</p>
 	<ul>
       {
